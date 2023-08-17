@@ -1,0 +1,24 @@
+{
+	"name": "markdown-it-hashtags",
+	"version": "1.0.0",
+	"description": "Plugin to hashtags for markdown-it markdown parser",
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint .",
+		"test": "nyc mocha"
+	},
+	"keywords": [
+		"markdown",
+		"markdown-it",
+		"hashtag",
+		"tag",
+		"markdown-it-plugin"
+	],
+	"author": "xac<jiangfengxi.c@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"markdown-it": "^13.0.1",
+		"mocha": "^10.2.0",
+		"nyc": "^15.1.0"
+	}
+}
