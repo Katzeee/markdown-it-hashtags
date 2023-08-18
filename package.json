@@ -1,6 +1,6 @@
 {
 	"name": "markdown-it-hashtags",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Plugin to hashtags for markdown-it markdown parser",
 	"main": "index.js",
 	"scripts": {
@@ -16,6 +16,7 @@
 	],
 	"author": "xac<jiangfengxi.c@gmail.com>",
 	"license": "MIT",
+	"repository": "https://github.com/Katzeee/markdown-it-hashtags",
 	"devDependencies": {
 		"markdown-it": "^13.0.1",
 		"markdown-it-testgen": "^0.1.6",
