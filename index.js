@@ -1,8 +1,9 @@
 'use strict';
+var isSpace = require('markdown-it/lib/common/utils').isSpace
 
 module.exports = function hashtag_plugin(md, options) {
 	options = options || {};
-	const HASHTAG_RE = /(^#[a-z]+[a-z0-9/\-]*)[\s]?/i;
+	const HASHTAG_RE = options.HASHTAG_RE || /(^#[a-z]+[a-z0-9/\-]*)[\s]?/i;
 	function hashtag(state, silent) {
 		var token,
 			pos = state.pos,
@@ -11,12 +12,14 @@ module.exports = function hashtag_plugin(md, options) {
 
 		if (state.src.charCodeAt(pos) !== 0x23 /* # */) return false;
 
+		if (pos !== 0 && !isSpace(state.src.charCodeAt(pos - 1))) return false;
+
 		// '#' at the end of the inline block
 		if (pos >= max) return false;
 
 		matches = state.src.slice(pos).match(HASHTAG_RE);
 		if (matches) {
-			state.pos += matches[0].length + 1;
+			state.pos += matches[0].length;
 			// pos =
 			if (!silent) {
 				token = state.push('hashtag_open', 'span', 1);

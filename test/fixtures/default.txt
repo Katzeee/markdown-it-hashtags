@@ -1,0 +1,124 @@
+doesn't break headings
+.
+# hashtag
+.
+<h1>hashtag</h1>
+.
+
+
+normal lowercase tag
+.
+#hashtag
+.
+<p><span class="hashtag">#hashtag</span></p>
+.
+
+
+normal uppercase tag
+.
+#HASHTAG
+.
+<p><span class="hashtag">#HASHTAG</span></p>
+.
+
+
+normal mix-case tag
+.
+#HashTag
+.
+<p><span class="hashtag">#HashTag</span></p>
+.
+
+
+nested tag
+.
+#HashTag1/hashtag2/hashtag3
+.
+<p><span class="hashtag">#HashTag1/hashtag2/hashtag3</span></p>
+.
+
+
+several tags
+.
+#hashtag1 #HashTag2 #HASHTAG3
+.
+<p><span class="hashtag">#hashtag1</span><span class="hashtag">#HashTag2</span><span class="hashtag">#HASHTAG3</span></p>
+.
+
+
+several tags need space interval
+.
+#hashtag1#HashTag2
+.
+<p><span class="hashtag">#hashtag1</span>#HashTag2</p>
+.
+
+
+doesn't infect texts
+.
+This is a#testtag
+.
+<p>This is a#testtag</p>
+.
+
+.
+not a#hashtag #hashtag
+.
+<p>not a#hashtag <span class="hashtag">#hashtag</span></p>
+.
+
+
+doesn't infect quotes
+.
+> This is quote #123
+.
+<blockquote>
+<p>This is quote #123</p>
+</blockquote>
+.
+
+doesn't infect links
+.
+[#hashtag](http://awe.so.me)
+.
+<p><a href="http://awe.so.me">#hashtag</a></p>
+.
+.
+[link](http://awe.so.me "there is a #title")
+.
+<p><a href="http://awe.so.me" title="there is a #title">link</a></p>
+.
+
+
+doesn't infect images
+.
+![a #hashtag](http://awe.so.me/image.gif)
+.
+<p><img src="http://awe.so.me/image.gif" alt="a #hashtag"></p>
+.
+
+.
+![image](http://awe.so.me/image.gif "a #title")
+.
+<p><img src="http://awe.so.me/image.gif" alt="image" title="a #title"></p>
+.
+
+
+ignores empty hashtags
+.
+there is no # hashtag
+.
+<p>there is no # hashtag</p>
+.
+
+.
+still no #
+.
+<p>still no #</p>
+.
+
+.
+##notag
+.
+<p>##notag</p>
+.
