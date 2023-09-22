@@ -1,6 +1,6 @@
 {
 	"name": "markdown-it-hashtags",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Plugin to hashtags for markdown-it markdown parser",
 	"main": "index.js",
 	"scripts": {
